@@ -4,11 +4,11 @@
 
 实现这份配置需要的软件包括：
 
-zsh
+zsh: `sudo apt install zsh`
 
-tmux
+tmux：`sudo apt install tmux`
 
-Nrovim
+Neovim：参考官网说明文档。
 
 # 同步方法
 
