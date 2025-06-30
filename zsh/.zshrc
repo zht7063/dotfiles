@@ -12,6 +12,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$PATH:/opt/nvim/"
 
 # 配置别名
-alias cls = "clear"
-alias tl = "tmux ls"
-alias t = "tmux a"
+alias cls="clear"
+alias tl="tmux ls"
+alias t="tmux a"
+
