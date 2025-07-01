@@ -78,21 +78,18 @@ git clone git@github.com:zht7063/dotfiles.git
 删除原始文件：
 
 ```shell
-rm ~/.zshrc
-rm ~/.tmux.conf
-
-rm -rf ~/.config/nvim
-
+bash # 先换到 bash 以便于修改文件
+# 删除原始文件
+rm ~/.zshrc ~/.tmux.conf
 ```
+
 然后同步本仓库中的文件：
 
 ```shell
-cd ~/.dotfiles
+cd ~/.dotfiles 
 
 stow tmux
 stow zsh
-stow nvim
-
 ```
 然后就可以将其中的配置文件通过软链接的方式在 home 目录下创建快捷方式。
 
