@@ -23,7 +23,7 @@ Neovim：参考官网说明文档。
 ```shell
 sudo apt update 
 sudo apt upgrade -y 
-apt install -y \
+sudo apt install -y \
     git curl wget fuse tmux zsh build-essential stow
 ```
 
