@@ -34,6 +34,9 @@ git config --global user.name "zht"
 git config --global user.email "zht7063@163.com"
 ssh-keygen -t ed25519 -C "zht7063@163.com"
 ```
+
+配置好以后记得到 github 添加 ssh 公钥。配置好之后可以使用 `ssh -T git@github.com` 检查连接情况。
+
 4. 安装 oh-my-zsh
 
 ```shell
@@ -55,6 +58,8 @@ sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim # Move Neovim to /opt/nvim
 ```
 
 Neovim 的环境变量将会在本仓库的 zsh 配置文件中标记，所以可以忽略环境变量的步骤，如果有必要的话，向 `.bashrc` 或者 `.zshrc` 中追加内容 `export PATH="$PATH:/opt/nvim/"` 可以直接添加环境变量。
+
+> 由于不可描述的原因，Neovim 的配置文件无法直接用 stow 创建软链接，于是决定采用单独仓库对其进行存储。设计好之后会在这里补充相关内容。
 
 6. 应用本仓库的配置文件
 
