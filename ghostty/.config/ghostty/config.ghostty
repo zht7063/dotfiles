@@ -1,0 +1,8 @@
+# font settings.
+font-family = Maple Mono NF CN
+font-size = 14
+
+# color theme config
+theme = Catppuccin Mocha
+window-padding-x = 12
+window-padding-y = 10

@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Logs & temporary files
+*.log
+*.swp
+*.swo
+*~
+
+# Local-only overrides
+*.local
