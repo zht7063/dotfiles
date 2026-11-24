@@ -6,6 +6,8 @@ Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 
 - `nvim` (`~/.config/nvim`)
 - `ghostty` (`~/.config/ghostty`)
+- `zsh` (`~/.zshrc`, `~/.zprofile`, `~/.zshenv`)
+- `starship` (`~/.config/starship.toml`)
 
 ## Usage
 

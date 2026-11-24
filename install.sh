@@ -11,6 +11,8 @@ fi
 PACKAGES=(
   nvim
   ghostty
+  zsh
+  starship
 )
 
 cd "$DOTFILES_DIR"
