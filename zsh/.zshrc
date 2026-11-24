@@ -21,5 +21,8 @@ et() {
   sudo "$HOME/.local/bin/easytier-core" -c "$HOME/.config/easytier/config.toml"
 }
 
+# Aliases
+alias ezaa='eza -T -L 2'
+
 # Machine-local secrets and overrides (not tracked in git)
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
