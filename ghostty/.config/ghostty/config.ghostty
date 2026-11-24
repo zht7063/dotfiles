@@ -6,3 +6,12 @@ font-size = 14
 theme = Catppuccin Mocha
 window-padding-x = 12
 window-padding-y = 10
+
+# cursor shaders (from sahaj-b/ghostty-cursor-shaders)
+custom-shader = shaders/cursor_warp.glsl
+# custom-shader = shaders/cursor_tail.glsl
+# custom-shader = shaders/cursor_sweep.glsl
+# custom-shader = shaders/ripple_cursor.glsl
+# custom-shader = shaders/ripple_rectangle_cursor.glsl
+# custom-shader = shaders/rectangle_boom_cursor.glsl
+# custom-shader = shaders/sonic_boom_cursor.glsl
