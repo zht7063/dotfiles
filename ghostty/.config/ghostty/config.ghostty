@@ -4,8 +4,8 @@ font-size = 14
 
 # color theme config
 theme = Catppuccin Mocha
-background-opacity = 0.75
-background-blur = 5
+background-opacity = 0.88
+background-blur = 20
 window-padding-x = 12
 window-padding-y = 10
 
