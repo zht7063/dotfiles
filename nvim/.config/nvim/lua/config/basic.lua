@@ -24,7 +24,9 @@ opt.incsearch = true           -- 输入搜索词时实时跳转预览
 opt.cursorline = true          -- 高亮光标所在当前行，配合相对行号更容易定位
 opt.scrolloff = 8              -- 上下滚动时，光标距离屏幕顶部/底部始终保留 8 行视野
 opt.sidescrolloff = 8          -- 左右滚动时保留 8 列视野
-opt.wrap = false               -- 关闭自动折行，长代码行横向滚动（需要折行时改为 true）
+opt.wrap = true                -- 超出屏幕宽度时自动折行
+opt.linebreak = true           -- 尽量在单词/标点边界折行，避免截断完整单词
+opt.breakindent = true         -- 折行后的续行保持与原行相同的缩进
 opt.signcolumn = "yes"         -- 始终显示左侧符号列（防止报错/Git 标记出现时画面左右抖动）
 opt.termguicolors = true       -- 开启 24 位真彩色，确保现代主题与终端颜色还原准确
 
