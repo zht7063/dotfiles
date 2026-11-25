@@ -17,5 +17,5 @@ PACKAGES=(
 )
 
 cd "$DOTFILES_DIR"
-stow -v -t "$HOME" "${PACKAGES[@]}"
+stow -v -t "$HOME" --ignore='(?i)^readme\.md$' "${PACKAGES[@]}"
 echo "Dotfiles linked successfully."

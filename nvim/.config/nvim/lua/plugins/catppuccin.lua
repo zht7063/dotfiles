@@ -7,6 +7,9 @@ return {
     transparent_background = true,
     integrations = {
       render_markdown = true,
+      snacks = true,
+      telescope = { enabled = true },
+      harpoon = true,
     },
   },
   config = function(_, opts)
