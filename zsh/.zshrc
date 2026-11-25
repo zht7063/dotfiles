@@ -23,6 +23,13 @@ et() {
 
 # Aliases
 alias ezaa='eza -T -L 2'
+alias ezaaa='eza -T -L 3'
+alias cls='clear'
 
 # Machine-local secrets and overrides (not tracked in git)
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+
+# Terminal MOTD
+if [[ -o interactive && -t 1 ]] && command -v fastfetch >/dev/null 2>&1; then
+  fastfetch
+fi

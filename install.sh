@@ -13,6 +13,7 @@ PACKAGES=(
   ghostty
   zsh
   starship
+  fastfetch
 )
 
 cd "$DOTFILES_DIR"

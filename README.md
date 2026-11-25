@@ -8,6 +8,7 @@ Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 - `ghostty` (`~/.config/ghostty`)
 - `zsh` (`~/.zshrc`, `~/.zprofile`, `~/.zshenv`)
 - `starship` (`~/.config/starship.toml`)
+- `fastfetch` (`~/.config/fastfetch`)
 
 ## Usage
 
