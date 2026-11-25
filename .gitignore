@@ -9,6 +9,8 @@
 
 # Local-only overrides
 *.local
+.env
+.env.*
 
 # Yazi downloaded plugins & flavors (managed via package.toml / ya pkg install)
 yazi/.config/yazi/plugins/

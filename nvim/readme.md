@@ -19,6 +19,7 @@
 | 依赖 | 命令 | 用途 / 对应插件 |
 | :--- | :--- | :--- |
 | **lazygit** | `lazygit` | `snacks.nvim` 快捷键 `<leader>gg` 打开 Lazygit |
+| **Node.js** | `node` | `copilot.lua` 运行 GitHub Copilot 语言服务（需 `>= 18`） |
 | **构建与解压工具** | `curl` / `unzip` / `tar` / C 编译器 | `mason.nvim` 自动下载与安装各类 LSP 服务器 |
 
 ## 安装依赖（macOS / Homebrew）
@@ -75,3 +76,24 @@ nvim --headless "+Lazy! sync" +qa
 - **关闭与原生跳转**
   - `<leader>bd`：关闭当前 Buffer 而不破坏分屏布局（`Snacks.bufdelete()`）
   - `Ctrl + ^`（或 `Ctrl + 6`）：在最近两个 Buffer 之间来回切换
+
+## AI 补全（GitHub Copilot）
+
+使用 `copilot.lua` 提供行内幽灵文本补全（插入模式下自动触发）。
+
+### 快捷键（插入模式）
+
+| 快捷键 | 功能 |
+| :--- | :--- |
+| `<Tab>` | 接受整条建议 |
+| `<C-j>` | 接受下一个词 |
+| `<M-]>`（`Option/Alt + ]`） | 切换到下一条建议 |
+| `<M-[>`（`Option/Alt + [`） | 切换到上一条建议 |
+| `<C-]>` | 关闭/隐藏当前建议 |
+
+### 常用命令
+
+- `:Copilot auth`：登录 / 授权 GitHub 账号
+- `:Copilot status`：查看运行与认证状态
+- `:Copilot disable` / `:Copilot enable`：临时关闭 / 重新开启 Copilot
+- `:checkhealth copilot`：检查 Node.js、语言服务与登录健康状态
