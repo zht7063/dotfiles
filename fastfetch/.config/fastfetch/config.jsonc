@@ -47,6 +47,12 @@
       "key": "CPU     "
     },
     {
+      "type": "gpu",
+      "key": "GPU     ",
+      "driverSpecific": true,
+      "format": "{name}{?core-count} ({core-count}){?}{?frequency} @ {frequency}{?}{?core-usage-num} ({core-usage-num}){?}"
+    },
+    {
       "type": "memory",
       "key": "Memory  "
     },
