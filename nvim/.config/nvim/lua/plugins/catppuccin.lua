@@ -5,6 +5,9 @@ return {
   opts = {
     flavour = "mocha",
     transparent_background = true,
+    integrations = {
+      render_markdown = true,
+    },
   },
   config = function(_, opts)
     require("catppuccin").setup(opts)
