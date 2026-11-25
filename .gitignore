@@ -9,3 +9,7 @@
 
 # Local-only overrides
 *.local
+
+# Yazi downloaded plugins & flavors (managed via package.toml / ya pkg install)
+yazi/.config/yazi/plugins/
+yazi/.config/yazi/flavors/

@@ -9,6 +9,7 @@ Personal dotfiles managed with [GNU Stow](https://www.gnu.org/software/stow/).
 - `zsh` (`~/.zshrc`, `~/.zprofile`, `~/.zshenv`)
 - `starship` (`~/.config/starship.toml`)
 - `fastfetch` (`~/.config/fastfetch`)
+- `yazi` (`~/.config/yazi`)
 
 ## Usage
 

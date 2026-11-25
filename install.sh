@@ -14,6 +14,7 @@ PACKAGES=(
   zsh
   starship
   fastfetch
+  yazi
 )
 
 cd "$DOTFILES_DIR"
