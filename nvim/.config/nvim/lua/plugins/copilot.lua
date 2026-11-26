@@ -8,7 +8,7 @@ return {
       enabled = true,
       auto_trigger = true,
       keymap = {
-        accept = "<Tab>",
+        accept = "<C-l>", -- 避免与 blink.cmp 的 <Tab> 冲突
         accept_word = "<C-j>",
         next = "<M-]>",
         prev = "<M-[>",

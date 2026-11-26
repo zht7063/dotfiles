@@ -23,5 +23,7 @@ return {
     { "<leader>n", function() Snacks.notifier.show_history() end, desc = "查看通知历史" },
     { "<leader>un", function() Snacks.notifier.hide() end, desc = "清除所有通知" },
     { "<C-/>", function() Snacks.terminal() end, desc = "切换浮动终端" },
+    -- 部分终端会把 Ctrl+/ 发送为 <C-_>，补充同等映射
+    { "<C-_>", function() Snacks.terminal() end, desc = "which_key_ignore" },
   },
 }
