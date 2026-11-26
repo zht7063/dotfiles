@@ -10,8 +10,12 @@ return {
       "neovim/nvim-lspconfig",
     },
     opts = {
-      -- 如需自动安装指定 LSP，可取消注释并添加，例如：
-      -- ensure_installed = { "lua_ls" },
+      -- 启动时自动安装以下 LSP，安装后由 mason-lspconfig 自动启用（vim.lsp.enable）
+      ensure_installed = {
+        "pyright", -- Python
+        "rust_analyzer", -- Rust
+        "ts_ls", -- TypeScript / JavaScript
+      },
     },
   },
 }

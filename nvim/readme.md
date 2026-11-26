@@ -8,10 +8,13 @@
 
 | 依赖 | 命令 | 用途 / 对应插件 |
 | :--- | :--- | :--- |
-| **Neovim** | `nvim` | 编辑器本体（建议 `>= 0.10`） |
+| **Neovim** | `nvim` | 编辑器本体（需 `>= 0.12`，`nvim-treesitter` main 分支要求） |
 | **Git** | `git` | `lazy.nvim` 下载与更新插件 |
 | **ripgrep** | `rg` | `telescope.nvim` 全局文本搜索（`live_grep`、`grep_string`） |
 | **fd** | `fd` | `telescope.nvim` 高速文件查找（`find_files`） |
+| **tree-sitter CLI** | `tree-sitter` | `nvim-treesitter` 编译安装解析器（需 `>= 0.26.1`，用 Homebrew 安装，**不要用 npm**） |
+| **C 编译器 / curl / tar** | `cc` / `curl` / `tar` | `nvim-treesitter` 下载与编译解析器；`mason.nvim` 安装 LSP |
+| **Node.js** | `node` | `copilot.lua`（需 `>= 18`）；`pyright`、`ts_ls` 语言服务器；部分解析器（如 `latex`）的生成 |
 | **Nerd Font** | - | `nvim-web-devicons`、`bufferline.nvim`、`snacks.nvim`、`render-markdown.nvim` 图标正常显示 |
 
 ### 可选依赖
@@ -19,17 +22,18 @@
 | 依赖 | 命令 | 用途 / 对应插件 |
 | :--- | :--- | :--- |
 | **lazygit** | `lazygit` | `snacks.nvim` 快捷键 `<leader>gg` 打开 Lazygit |
-| **Node.js** | `node` | `copilot.lua` 运行 GitHub Copilot 语言服务（需 `>= 18`），建议经 `blink-copilot` 出现在补全菜单中 |
-| **构建与解压工具** | `curl` / `unzip` / `tar` / C 编译器 | `mason.nvim` 自动下载与安装各类 LSP 服务器 |
+| **utftex** | `utftex` | `render-markdown.nvim` 将 LaTeX 公式渲染为 Unicode 文本 |
+| **Rust 工具链** | `cargo` / `rustc` | `rust_analyzer` 分析 Rust 项目（建议用 `rustup` 安装） |
+| **unzip** | `unzip` | `mason.nvim` 解压部分 LSP 安装包 |
 
 ## 安装依赖（macOS / Homebrew）
 
 ```bash
 # 基础与推荐依赖
-brew install neovim git ripgrep fd
+brew install neovim git ripgrep fd tree-sitter-cli node
 
 # 可选依赖
-brew install lazygit
+brew install lazygit utftex
 ```
 
 ## 应用配置与同步插件
@@ -41,6 +45,11 @@ stow -v -t "$HOME" --ignore='(?i)^readme\.md$' nvim
 # 同步安装 lazy.nvim 插件
 nvim --headless "+Lazy! sync" +qa
 ```
+
+首次启动 Neovim 时，会自动完成：
+
+- **Treesitter 解析器**（`lua/plugins/treesitter.lua`）：异步安装 Python、Rust、TypeScript/TSX、JavaScript、Lua、Bash、JSON、TOML、YAML、Markdown、HTML、LaTeX、Regex、CSS 等解析器，并为有解析器的文件类型开启 treesitter 高亮。插件更新后会自动执行 `:TSUpdate`。
+- **LSP 服务器**（`lua/plugins/lsp.lua`）：由 `mason-lspconfig.nvim` 自动安装并启用 `pyright`（Python）、`rust_analyzer`（Rust）、`ts_ls`（TypeScript / JavaScript）。可用 `:Mason` 查看或管理。
 
 ## 常用操作：打开文件与切换 Buffer
 
