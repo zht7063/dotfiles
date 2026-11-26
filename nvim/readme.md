@@ -19,7 +19,7 @@
 | 依赖 | 命令 | 用途 / 对应插件 |
 | :--- | :--- | :--- |
 | **lazygit** | `lazygit` | `snacks.nvim` 快捷键 `<leader>gg` 打开 Lazygit |
-| **Node.js** | `node` | `copilot.lua` 运行 GitHub Copilot 语言服务（需 `>= 18`） |
+| **Node.js** | `node` | `copilot.lua` 运行 GitHub Copilot 语言服务（需 `>= 18`），建议经 `blink-copilot` 出现在补全菜单中 |
 | **构建与解压工具** | `curl` / `unzip` / `tar` / C 编译器 | `mason.nvim` 自动下载与安装各类 LSP 服务器 |
 
 ## 安装依赖（macOS / Homebrew）
@@ -79,7 +79,7 @@ nvim --headless "+Lazy! sync" +qa
 
 ## 代码补全（blink.cmp）
 
-使用 `blink.cmp` 的 `super-tab` 预设，补全来源为 LSP、路径、代码片段与当前 Buffer 单词。
+使用 `blink.cmp` 的 `super-tab` 预设，补全来源为 Copilot（`blink-copilot`）、LSP、路径、代码片段与当前 Buffer 单词。
 
 ### 快捷键（插入模式）
 
@@ -95,17 +95,12 @@ nvim --headless "+Lazy! sync" +qa
 
 ## AI 补全（GitHub Copilot）
 
-使用 `copilot.lua` 提供行内幽灵文本补全（插入模式下自动触发）。
+使用 `copilot.lua` 作为 Copilot 后端，并通过 [blink-copilot](https://github.com/fang2hou/blink-copilot) 将建议合并进 `blink.cmp` 补全菜单（菜单中带 Copilot 图标的条目，默认排在前面）。`copilot.lua` 自带的幽灵文本与面板已关闭，避免与补全菜单同时出现。
 
-### 快捷键（插入模式）
+### 使用方式（插入模式）
 
-| 快捷键 | 功能 |
-| :--- | :--- |
-| `<C-l>` | 接受整条建议（不用 `<Tab>`，避免与 blink.cmp 冲突） |
-| `<C-j>` | 接受下一个词 |
-| `<M-]>`（`Option/Alt + ]`） | 切换到下一条建议 |
-| `<M-[>`（`Option/Alt + [`） | 切换到上一条建议 |
-| `<C-]>` | 关闭/隐藏当前建议 |
+- 与普通补全项相同：`<C-n>` / `<C-p>` 选择，`<Tab>` 接受（见上方 blink.cmp 快捷键）。
+- Copilot 建议可能为多行代码，可按 `<C-space>` 查看文档预览完整内容。
 
 ### 常用命令
 

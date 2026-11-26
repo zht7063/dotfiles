@@ -3,17 +3,9 @@ return {
   cmd = "Copilot",
   event = "InsertEnter",
   opts = {
+    -- 建议统一由 blink.cmp（blink-copilot 来源）在补全菜单中展示，
+    -- 关闭 copilot.lua 自带的幽灵文本与面板，避免两套界面同时出现
+    suggestion = { enabled = false },
     panel = { enabled = false },
-    suggestion = {
-      enabled = true,
-      auto_trigger = true,
-      keymap = {
-        accept = "<C-l>", -- 避免与 blink.cmp 的 <Tab> 冲突
-        accept_word = "<C-j>",
-        next = "<M-]>",
-        prev = "<M-[>",
-        dismiss = "<C-]>",
-      },
-    },
   },
 }
